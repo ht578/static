@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- 父系 -->
+  <parent>
+  	<groupId>org.springframework.boot</groupId>
+  	<artifactId>spring-boot-starter-parent</artifactId>
+  	<version>1.5.10.RELEASE</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.java</groupId>
+  <artifactId>spring-boot-mybatis-cdbu</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	<!-- 设置jdk版本 -->
+	<!-- 设置thymeleaf版本，使其不出现严谨异常 -->
+   <properties>
+  	<java.version>1.7</java.version>
+  	<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+  	<thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
+  </properties>
+  
+    <dependencies>
+    <!-- springboot启动器 -->
+  	<dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<!-- thymeleaf视图技术启动器 -->
+	<dependency>
+	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
+	 <!-- mybatis启动器设置版本 -->
+	<dependency>
+		<groupId>org.mybatis.spring.boot</groupId>
+    	<artifactId>mybatis-spring-boot-starter</artifactId>
+    	<version>1.1.1</version>
+	</dependency>
+	<!-- mysql连接-->
+	<dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+	</dependency>
+	<dependency>
+	<!-- 连接地址池设置版本 -->
+    	<groupId>com.alibaba</groupId>
+    	<artifactId>druid</artifactId>
+    	<version>1.0.9</version>
+	</dependency>
+</dependencies>
+</project>

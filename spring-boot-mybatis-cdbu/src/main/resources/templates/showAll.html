@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询所有用户</title>
+</head>
+<body>
+	<table border="1" style="width:500px">
+		<tr>
+			<th>学号</th>
+			<th>姓名</th>
+			<th>班级</th>
+			<th>操作</th>
+		</tr>
+		<tr th:each = "e : ${list}">
+			<td th:text="${e.id}"></td>
+			<td th:text="${e.name}"></td>
+			<td th:text="${e.className}"></td>
+			<td>
+				<a th:href="@{/students/findAllStudentsById(id=${e.id})}">更新用户</a>
+				<a th:href="@{/students/delStudents(id=${e.id})}">删除用户</a>
+				<a th:href="@{/students/input}">增加用户</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

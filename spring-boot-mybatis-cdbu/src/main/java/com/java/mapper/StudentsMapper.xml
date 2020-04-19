@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mapper.StudentsMapper">
+	<insert id="addStudents" parameterType="students">
+		insert into Students(name,className) values(#{name},#{className})
+	</insert>
+	<select id="selectStudents" resultType="students">
+		select name,className,id from students
+	</select>
+	
+	<select id="selectStudentsById" resultType="students">
+		select name,className,id from students where id=#{value}	
+	</select>
+	
+	<update id="updateStudents" parameterType="students">
+		update students set name=#{name},className=#{className} where id=#{id}
+	</update>
+	
+	<delete id="delStudents" parameterType="students"> 
+		delete from students where id=#{value}
+	</delete>
+	
+</mapper>

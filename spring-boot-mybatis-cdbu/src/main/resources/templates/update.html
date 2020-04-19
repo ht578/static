@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>更新页面</title>
+</head>
+<body>
+	<form th:action="@{/students/updateStudents}" method="post">
+		<input type="hidden" name="id" th:field="${student.id}"/><br/>
+		姓名：<input type="txet" name="name" th:field="${student.name}"/><br/>
+		班级：<input type="txet" name="className" th:field="${student.className}"/><br/>
+		<input type="submit" value="提交" /><br/>
+	</form>
+</body>
+</html>
